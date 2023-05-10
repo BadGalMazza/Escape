@@ -22,5 +22,5 @@ EditorBuildSettings:
     guid: ba2e9657d9b7f744ea39802bba40de9f
   - enabled: 1
     path: Assets/Scenes/Quiz.unity
-    guid: 4d0de341c4b7a2149819c2e1f0c54071
+    guid: 55fce0adbd2f2468991119818a27f1db
   m_configObjects: {}
