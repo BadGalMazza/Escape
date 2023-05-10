@@ -591,7 +591,7 @@ MonoBehaviour:
   currentQuestion: 0
   Quizpanel: {fileID: 1838779756}
   GoPanel: {fileID: 1421026346}
-  CongratulationText: {fileID: 624843637}
+  CongratulationText: {fileID: 624843634}
   QuestionText: {fileID: 622629691}
   ScoreTxt: {fileID: 1259648695}
   score: 0
