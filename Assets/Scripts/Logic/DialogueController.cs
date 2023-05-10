@@ -8,9 +8,17 @@ public class DialogueController : MonoBehaviour
 
     public DialogueData_SO dialogueFinish;
 
+    public DialogueData_SO dialogueFinishWater;
+
+    public DialogueData_SO dialogueFinishFood;
+
     private Stack<string> dialogueEmptyStack;
 
     private Stack<string> dialogueFinishStack;
+
+    private Stack<string> dialogueFinishWaterStack;
+
+    private Stack<string> dialogueFinishFoodStack;
 
     private bool isTalking;
 
@@ -23,6 +31,8 @@ public class DialogueController : MonoBehaviour
     {
         dialogueEmptyStack = new Stack<string>();
         dialogueFinishStack = new Stack<string>();
+        dialogueFinishWaterStack = new Stack<string>();
+        dialogueFinishFoodStack = new Stack<string>();
 
         for (int i = dialogueEmpty.dialogueList.Count - 1; i > -1; i--)
         {
@@ -46,7 +56,16 @@ public class DialogueController : MonoBehaviour
         if (!isTalking)
             StartCoroutine(DialogueRoutine(dialogueFinishStack));
     }
-
+    public void ShowdialogueFinishWater()
+    {
+        if (!isTalking)
+            StartCoroutine(DialogueRoutine(dialogueFinishWaterStack));
+    }
+    public void ShowdialogueFinishFood()
+    {
+        if (!isTalking)
+            StartCoroutine(DialogueRoutine(dialogueFinishFoodStack));
+    }
     private IEnumerator DialogueRoutine(Stack<string> data)
     {
         isTalking = true;

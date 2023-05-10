@@ -24,6 +24,7 @@ public class TransitionManager : Singleton<TransitionManager>
         EventHandler.GameStateChangedEvent -= OnGameStateChangeEvent;
     }
 
+
     private void Start()
     {
         StartCoroutine(TransitionToScene(string.Empty, startScene));

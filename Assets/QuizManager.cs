@@ -12,7 +12,7 @@ public class QuizManager : MonoBehaviour
 
     public GameObject Quizpanel;
     public GameObject GoPanel;
-    public Text CongratulationText;
+    public GameObject CongratulationText;
 
     public Text QuestionText;
     public Text ScoreTxt;
@@ -24,6 +24,7 @@ public class QuizManager : MonoBehaviour
     {
         totalQuestions = QnA.Count;
         GoPanel.SetActive(false);
+        CongratulationText.SetActive(false);
         generateQuestion();
     }
 
@@ -37,8 +38,16 @@ public class QuizManager : MonoBehaviour
     {
         Quizpanel.SetActive(false);
         GoPanel.SetActive(true);
-        ScoreTxt.text = score + "/" + totalQuestions; 
+        ScoreTxt.text = score + "/" + totalQuestions;
 
+        if (score == totalQuestions)
+        {
+            CongratulationText.SetActive(true);
+        }
+        else
+        {
+            CongratulationText.SetActive(false);
+        }
     }
 
 
@@ -85,8 +94,5 @@ public class QuizManager : MonoBehaviour
             Debug.Log("Out of Questions");
             GameOver();
         }
-        
-
-   
     }
 }

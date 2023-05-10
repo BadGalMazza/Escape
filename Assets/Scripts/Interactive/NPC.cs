@@ -16,6 +16,15 @@ public class NPC : Interactive
     {
         if(!isDone)
             dialogueController.ShowDialogueFinish();
+  /*      else if()
+        {
+            dialogueController.sho
+        }
+        else if()
+        {
+
+
+        }*/
         else
             dialogueController.ShowDialogueEmpty();
 
