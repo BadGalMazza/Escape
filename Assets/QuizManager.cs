@@ -29,8 +29,9 @@ public class QuizManager : MonoBehaviour
 
     public void retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Persistent");
     }
+
 
     public void GameOver()
     {
