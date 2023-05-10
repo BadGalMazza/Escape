@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ResetScenes : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject jokerUI;
+    //public GameObject jokerUI;
     void Start()
     {
         
@@ -22,3 +22,4 @@ public class ResetScenes : MonoBehaviour
         SceneManager.LoadScene(count);
     }
 }
+    

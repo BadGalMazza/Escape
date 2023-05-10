@@ -1390,6 +1390,7 @@ GameObject:
   - component: {fileID: 2087432423}
   - component: {fileID: 2087432422}
   - component: {fileID: 2087432421}
+  - component: {fileID: 2087432425}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -1425,7 +1426,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087432419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8ea71d7563f6364b9ff7401aacc4ef8, type: 3}
   m_Name: 
@@ -1475,9 +1476,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087432421}
-        m_TargetAssemblyTypeName: Loadscenes, Assembly-CSharp
-        m_MethodName: loadScenes
+      - m_Target: {fileID: 2087432425}
+        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
+        m_MethodName: TeleportToSecen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1525,6 +1526,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087432419}
   m_CullTransparentMesh: 1
+--- !u!114 &2087432425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087432419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneFrom: PC
+  sceneToGo: Wall 1
 --- !u!1 &2117523415
 GameObject:
   m_ObjectHideFlags: 0
