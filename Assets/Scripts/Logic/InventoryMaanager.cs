@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryMaanager : Singleton<InventoryMaanager>
+public class InventoryMaanager : MonoBehaviour
 {
+    public static InventoryMaanager Instance;
+
     public ItemDataList itemData;
 
     [SerializeField] private List<ItemName> itemList = new List<ItemName>();
 
     private void OnEnable()
     {
+        if (Instance == null)
+            Instance = this;
+
         EventHandler.ItemUsedEvent += OnItemUsedEvent;
         EventHandler.ChangeItemEvent += OnChangeItemEvent;
         EventHandler.AfterSceneLoadedEvent += OnAfterSceneLoadedEvent;

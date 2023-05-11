@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 1
-  sceneToGo: Quiz
+  sceneFrom: 0
+  sceneToGo: 0
 --- !u!61 &316050156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -837,8 +837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 1
-  sceneToGo: Wall 4
+  sceneFrom: 2
+  sceneToGo: 5
 --- !u!61 &1209040133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1053,8 +1053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 1
-  sceneToGo: Wall 2
+  sceneFrom: 2
+  sceneToGo: 3
 --- !u!61 &1602174700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1235,8 +1235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 1
-  sceneToGo: PC
+  sceneFrom: 2
+  sceneToGo: 7
 --- !u!61 &2100727369
 BoxCollider2D:
   m_ObjectHideFlags: 0

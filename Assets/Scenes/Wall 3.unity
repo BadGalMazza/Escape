@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 3
-  sceneToGo: Passwordlock
+  sceneFrom: 4
+  sceneToGo: 8
 --- !u!61 &91274507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -746,8 +746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 3
-  sceneToGo: Wall 4
+  sceneFrom: 4
+  sceneToGo: 5
 --- !u!61 &1513512851
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -877,8 +877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 3
-  sceneToGo: Wall 2
+  sceneFrom: 4
+  sceneToGo: 3
 --- !u!61 &2050931622
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SceneName] public string sceneFrom;
+    public TransitionManager.LoadedScenes sceneFrom;
 
-    [SceneName] public string sceneToGo;
+    public TransitionManager.LoadedScenes sceneToGo;
 
     public void TeleportToSecen()
     {

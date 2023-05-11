@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 4
-  sceneToGo: Wall 1
+  sceneFrom: 5
+  sceneToGo: 2
 --- !u!61 &403680696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -421,8 +421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d7ac67ea217df47b4f8b5ace342053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFrom: Wall 4
-  sceneToGo: Wall 3
+  sceneFrom: 5
+  sceneToGo: 4
 --- !u!61 &973938782
 BoxCollider2D:
   m_ObjectHideFlags: 0
