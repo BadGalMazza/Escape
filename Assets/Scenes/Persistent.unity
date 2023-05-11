@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -64.509445}
+  m_AnchoredPosition: {x: -7.1619, y: -88.962}
   m_SizeDelta: {x: 61.0189, y: 61.0189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4236934
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 2
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -691,7 +691,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -870,8 +870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -35, y: 154}
-  m_SizeDelta: {x: 92.4545, y: 108.8332}
+  m_AnchoredPosition: {x: -103, y: 272.99106}
+  m_SizeDelta: {x: 180.788, y: 212.8154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733214796
 MonoBehaviour:
@@ -1300,8 +1300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.39998, y: 76}
-  m_SizeDelta: {x: 960.6, y: 302.3}
+  m_AnchoredPosition: {x: 88, y: 22.253}
+  m_SizeDelta: {x: 323.6895, y: 128.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571955295
 MonoBehaviour:
@@ -1794,7 +1794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 68}
+  m_AnchoredPosition: {x: -7.1619, y: 106.66}
   m_SizeDelta: {x: 65.3428, y: 62.4066}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037522730
