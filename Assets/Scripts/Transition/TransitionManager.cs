@@ -9,8 +9,8 @@ public class TransitionManager : MonoBehaviour
 
     public enum LoadedScenes
     {
-        Menu,
         Persistent,
+        Menu,
         Wall1,
         Wall2,
         Wall3,
