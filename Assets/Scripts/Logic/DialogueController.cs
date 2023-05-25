@@ -43,6 +43,15 @@ public class DialogueController : MonoBehaviour
         {
             dialogueFinishStack.Push(dialogueFinish.dialogueList[i]);
         }
+        for (int i = dialogueFinishWater.dialogueList.Count - 1; i > -1; i--)
+        {
+            dialogueFinishWaterStack.Push(dialogueFinishWater.dialogueList[i]);
+
+        }
+        for (int i = dialogueFinishFood.dialogueList.Count - 1; i > -1; i--)
+        {
+            dialogueFinishFoodStack.Push(dialogueFinishFood.dialogueList[i]);
+        }
     }
 
     public void ShowDialogueEmpty()
@@ -69,11 +78,11 @@ public class DialogueController : MonoBehaviour
     private IEnumerator DialogueRoutine(Stack<string> data)
     {
         isTalking = true;
-        if(data.TryPop(out string result))
+        if (data.TryPop(out string result))
         {
             EventHandler.CallShowDialogueEvent(result);
             yield return null;
-            isTalking=false;
+            isTalking = false;
             EventHandler.CallGameStateChangeEvent(GameState.Pause);
         }
         else

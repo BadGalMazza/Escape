@@ -12,12 +12,13 @@ public class Interactive : MonoBehaviour
     {
         if (itemName == requireItem && !isDone)
         {
+            string itemNameTring = itemName.ToString();
             isDone = true;
-            OnClickedAction();
+            OnClickedAction(itemNameTring);
             EventHandler.CallItemUsedEvent(itemName);
         }
     }
-    protected virtual void OnClickedAction()
+    protected virtual void OnClickedAction(string name)
     {
 
     }
