@@ -22,46 +22,48 @@ public class InventoryUI : MonoBehaviour
 
     private void OnUpdateUIEvent(ItemDetails itemDetails, int index)
     {
-        if(itemDetails == null)
+
+        Debug.Log("itemDetailssize" + index);
+        if (itemDetails == null)
         {
             slotUI.SetEmpty();
             currentIndex = -1;
-            leftButton.interactable = false;
-            rightButton.interactable = false;
+            //  leftButton.interactable = false;
+            // rightButton.interactable = false;
         }
         else
         {
             currentIndex = index;
             slotUI.SetItem(itemDetails);
 
-            if(index > 0)
-                leftButton.interactable = true;
-            if (index == -1)
-            {
-                leftButton.interactable = false;
-                rightButton.interactable = false;
-            }
+            //   if(index > 0)
+            //leftButton.interactable = true;
+            // if (index == -1)
+            //  {
+            //leftButton.interactable = false;
+            // rightButton.interactable = false;
+            //  }
         }
     }
-    
+
     public void SwitchItem(int amount)
     {
         var index = currentIndex + amount;
-        if (index < currentIndex)
-        {
-            leftButton.interactable = false;
-            rightButton.interactable = true;
-        }
-        else if (index > currentIndex)
-        {
-            leftButton.interactable = true;
-            rightButton.interactable= false;
-        }
-        else
-        {
-            leftButton.interactable = true;
-            rightButton.interactable = true;
-        }
+        /*        if (index < currentIndex)
+                {
+                    leftButton.interactable = false;
+                    rightButton.interactable = true;
+                }
+                else if (index > currentIndex)
+                {
+                    leftButton.interactable = true;
+                    rightButton.interactable= false;
+                }
+                else
+                {
+                    leftButton.interactable = true;
+                    rightButton.interactable = true;
+                }*/
 
         EventHandler.CallChangeItemEvent(index);
     }

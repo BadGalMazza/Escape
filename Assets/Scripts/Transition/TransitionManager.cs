@@ -18,7 +18,8 @@ public class TransitionManager : MonoBehaviour
         Quiz,
         PC,
         Passwordlock,
-        Run
+        Run,
+        telephone,
     }
 
     public LoadedScenes startScene;

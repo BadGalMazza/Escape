@@ -37,7 +37,7 @@ public class draw : Interactive
         }
 
     }
-    protected override void OnClickedAction()
+    protected override void OnClickedAction(string name)
     {
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);

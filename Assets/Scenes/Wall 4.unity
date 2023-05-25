@@ -501,7 +501,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19016838, y: 2.2511594}
+  m_Offset: {x: 0.29832506, y: 1.461618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -512,7 +512,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2820187, y: 3.9142423}
+  m_Size: {x: 2.4600286, y: 5.493325}
   m_EdgeRadius: 0
 --- !u!4 &1521256290
 Transform:
@@ -522,7 +522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521256287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.35, y: -4.46, z: 0.04181324}
+  m_LocalPosition: {x: 8.05, y: -4.58, z: 0.04181324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -541,10 +541,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae89b303cf3641d48adfb8cb453cc8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueEmpty: {fileID: 11400000, guid: 075f86131f3d8b641b2bac14cc6b012e, type: 2}
-  dialogueFinish: {fileID: 11400000, guid: e1c44d6659c77c24392a4c627ac15960, type: 2}
-  dialogueFinishWater: {fileID: 0}
-  dialogueFinishFood: {fileID: 0}
+  dialogueEmpty: {fileID: 11400000, guid: e1c44d6659c77c24392a4c627ac15960, type: 2}
+  dialogueFinish: {fileID: 11400000, guid: d95005a016922ef4c8ea6f1baf9b1f2f, type: 2}
+  dialogueFinishWater: {fileID: 11400000, guid: 075f86131f3d8b641b2bac14cc6b012e, type: 2}
+  dialogueFinishFood: {fileID: 11400000, guid: 8398e7e1d09748c409461257d32aa2eb, type: 2}
 --- !u!114 &1521256292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,3 +559,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requireItem: 4
   isDone: 0
+  count: 0
+  iseatfood: 0
+  isdrinkwater: 0
+--- !u!1 &1957189702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957189706}
+  - component: {fileID: 1957189705}
+  - component: {fileID: 1957189704}
+  - component: {fileID: 1957189703}
+  m_Layer: 0
+  m_Name: NPC1
+  m_TagString: Interactive
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1957189703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957189702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae89b303cf3641d48adfb8cb453cc8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueEmpty: {fileID: 11400000, guid: e1c44d6659c77c24392a4c627ac15960, type: 2}
+  dialogueFinish: {fileID: 11400000, guid: d95005a016922ef4c8ea6f1baf9b1f2f, type: 2}
+  dialogueFinishWater: {fileID: 11400000, guid: 075f86131f3d8b641b2bac14cc6b012e, type: 2}
+  dialogueFinishFood: {fileID: 11400000, guid: 8398e7e1d09748c409461257d32aa2eb, type: 2}
+--- !u!114 &1957189704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957189702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2230f7bec26a7b149ad944328005362b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireItem: 5
+  isDone: 0
+  count: 0
+  iseatfood: 0
+  isdrinkwater: 0
+--- !u!61 &1957189705
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957189702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.29832506, y: 1.461618}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4600286, y: 5.493325}
+  m_EdgeRadius: 0
+--- !u!4 &1957189706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957189702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.05, y: -4.58, z: 0.04181324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
