@@ -210,7 +210,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272307455}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &272307457
 Camera:
   m_ObjectHideFlags: 0
@@ -743,6 +743,8 @@ MonoBehaviour:
   _piecePrefab: {fileID: 2163844525323610576, guid: 5729f6249e6d540f3955de02c18c790e, type: 3}
   _slotParent: {fileID: 1230121373}
   _pieceParent: {fileID: 350598773}
+  _pizzaPrefab: {fileID: 1004498120926247003, guid: 42c99de0e50f945f19af92027c58922b, type: 3}
+  count: 0
 --- !u!1 &1515977122
 GameObject:
   m_ObjectHideFlags: 0
