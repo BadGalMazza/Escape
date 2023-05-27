@@ -18,12 +18,16 @@ MonoBehaviour:
   - itemName: 2
     itemSprite: {fileID: 21300000, guid: 8591b940a361e6e449b963664cffd33e, type: 3}
   - itemName: 3
-    itemSprite: {fileID: 21300000, guid: 696467abd3ad064468017eaf51033d3d, type: 3}
+    itemSprite: {fileID: 21300000, guid: fce7628361feb274c9cb0df8b3807bac, type: 3}
   - itemName: 4
     itemSprite: {fileID: 21300000, guid: ed6e445404b14ab478bd865c14223a55, type: 3}
+  - itemName: 6
+    itemSprite: {fileID: 21300000, guid: dd976a19045209d47893632fba9efa54, type: 3}
+  - itemName: 7
+    itemSprite: {fileID: 21300000, guid: cfdf7d437ddaf4b4ca4a09afadf44990, type: 3}
   - itemName: 5
     itemSprite: {fileID: 21300000, guid: 6c7cf3d4541f0ac429e26b15c7974722, type: 3}
-  - itemName: 6
-    itemSprite: {fileID: 21300000, guid: cfdf7d437ddaf4b4ca4a09afadf44990, type: 3}
-  - itemName: 7
+  - itemName: 9
+    itemSprite: {fileID: 21300000, guid: e8dd42d7588a4db4b8a595bc7a2a10c9, type: 3}
+  - itemName: 8
     itemSprite: {fileID: 21300000, guid: 4f3210e08b282494ea76e66238593c57, type: 3}
