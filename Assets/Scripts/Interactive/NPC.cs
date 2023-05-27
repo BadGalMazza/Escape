@@ -17,6 +17,10 @@ public class NPC : Interactive
     public GameObject red;
     public GameObject blue;
     public MoveCompass moveCompass;
+
+    public GameObject keyPrefab;
+    public bool hasKeySpawned = false;
+
     private void Awake()
     {
         dialogueController = GetComponent<DialogueController>();
@@ -48,6 +52,12 @@ public class NPC : Interactive
             {
 
                 dialogueController.ShowDialogueFinish();
+                // 只有当钥匙还未生成时，才生成钥匙
+                if (!hasKeySpawned)
+                {
+                    Instantiate(keyPrefab, transform.position, Quaternion.identity);
+                    hasKeySpawned = true;  // 钥匙已生成
+                }
             }
             else
             {

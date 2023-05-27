@@ -562,6 +562,13 @@ MonoBehaviour:
   count: 0
   iseatfood: 0
   isdrinkwater: 0
+  isShowText: 1
+  isBatteryBlue: 0
+  isBatteryRed: 0
+  red: {fileID: 0}
+  blue: {fileID: 0}
+  moveCompass: {fileID: 0}
+  keyPrefab: {fileID: 4805992720416623493, guid: 548358bde2b9b486c96269ca6ab75dfb, type: 3}
 --- !u!1 &1957189702
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +621,13 @@ MonoBehaviour:
   count: 0
   iseatfood: 0
   isdrinkwater: 0
+  isShowText: 1
+  isBatteryBlue: 0
+  isBatteryRed: 0
+  red: {fileID: 0}
+  blue: {fileID: 0}
+  moveCompass: {fileID: 0}
+  keyPrefab: {fileID: 0}
 --- !u!61 &1957189705
 BoxCollider2D:
   m_ObjectHideFlags: 0
