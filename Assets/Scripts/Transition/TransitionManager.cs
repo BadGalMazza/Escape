@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TransitionManager : MonoBehaviour
 {
     public static TransitionManager Instance;
-
+    public int index=0;
     public enum LoadedScenes
     {
         Persistent,
@@ -20,7 +20,8 @@ public class TransitionManager : MonoBehaviour
         Passwordlock,
         Run,
         telephone,
-        Puzzle,
+        PCenter,
+        clock,
     }
 
     public LoadedScenes startScene;
@@ -49,8 +50,20 @@ public class TransitionManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(TransitionToScene(null, startScene));
+        SaveByPlayerPrefs();
     }
+    private void SaveByPlayerPrefs()
+    {
 
+        PlayerPrefs.SetInt("iseatfood", 0);
+        PlayerPrefs.SetInt("isdrinkwater", 0);
+        PlayerPrefs.SetInt("iseatfood", 0);
+        PlayerPrefs.SetInt("isBatteryBlue", 0);
+        PlayerPrefs.SetInt("isBatteryRed", 0);
+        PlayerPrefs.SetInt("count", 0);
+        PlayerPrefs.Save();
+
+    }
     private void OnGameStateChangeEvent(GameState gameState)
     {
         canTransition = gameState == GameState.GamePlay;
@@ -82,7 +95,8 @@ public class TransitionManager : MonoBehaviour
 
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newScene);
-
+        index = newScene.buildIndex;
+        Debug.Log(newScene.buildIndex);
         EventHandler.CallAfterSceneLoadedEvent();
         yield return Fade(0);
     }

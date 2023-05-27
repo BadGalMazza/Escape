@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     private bool isSelected;
 
+    public TransitionManager transitionManager;
+
+
+
     public void SetItem(ItemDetails itemDetails)
     {
         currentItem = itemDetails;
@@ -35,29 +40,81 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         isSelected = !isSelected;
         EventHandler.CallItemSelectedEvent(currentItem, isSelected);
         Debug.Log(currentItem.itemName);
-        Scene gameScene = SceneManager.GetSceneByBuildIndex(5);
+        Scene gameScene = SceneManager.GetSceneByBuildIndex(transitionManager.index);
         // Debug.Log(gameScene.name);
         //????
+
+        Debug.Log(gameScene.name);
+
         GameObject npc = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC");
         GameObject npc1 = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC1");
         Debug.Log(gameScene.name);
-        if (currentItem.itemName.ToString() == "Wonster")
+        if (transitionManager.index == 5)
         {
-            Debug.Log("aaa");
-            npc.SetActive(true);
-            npc.GetComponent<NPC>().count = npc1.GetComponent<NPC>().count;
-            npc.GetComponent<NPC>().iseatfood = npc1.GetComponent<NPC>().iseatfood;
-            npc.GetComponent<NPC>().isdrinkwater = npc1.GetComponent<NPC>().isdrinkwater;
-            npc1.SetActive(false);
+
+
+            if (currentItem.itemName.ToString() == "Wonster")
+            {
+                if (PlayerPrefs.HasKey("iseatfood") && PlayerPrefs.HasKey("isdrinkwater") && PlayerPrefs.HasKey("count"))
+                {
+
+
+
+                    Debug.Log("aaa");
+                    npc.SetActive(true);
+                    npc.GetComponent<NPC>().count = PlayerPrefs.GetInt("count");
+                    npc.GetComponent<NPC>().iseatfood = PlayerPrefs.GetInt("iseatfood") == 1 ? true : false;
+                    npc.GetComponent<NPC>().isdrinkwater = PlayerPrefs.GetInt("isdrinkwater") == 1 ? true : false;
+                    npc1.SetActive(false);
+
+                }
+            }
+            else if (currentItem.itemName.ToString() == "Food")
+                if (PlayerPrefs.HasKey("iseatfood") && PlayerPrefs.HasKey("isdrinkwater") && PlayerPrefs.HasKey("count"))
+                {
+                    {
+                        Debug.Log("bbb");
+                        npc1.SetActive(true);
+                        npc1.GetComponent<NPC>().count = PlayerPrefs.GetInt("count");
+                        npc1.GetComponent<NPC>().iseatfood = PlayerPrefs.GetInt("iseatfood") == 1 ? true : false;
+                        npc1.GetComponent<NPC>().isdrinkwater = PlayerPrefs.GetInt("isdrinkwater") == 1 ? true : false;
+                        npc.SetActive(false);
+                    }
+                }
         }
-        else if (currentItem.itemName.ToString() == "Food")
+        else if (transitionManager.index == 12)
         {
-            Debug.Log("bbb");
-            npc1.SetActive(true);
-            npc1.GetComponent<NPC>().count = npc.GetComponent<NPC>().count;
-            npc1.GetComponent<NPC>().iseatfood = npc.GetComponent<NPC>().iseatfood;
-            npc1.GetComponent<NPC>().isdrinkwater = npc.GetComponent<NPC>().isdrinkwater;
-            npc.SetActive(false);
+
+            if (currentItem.itemName.ToString() == "BatteryBlue")
+            {
+                if (PlayerPrefs.HasKey("isBatteryBlue") && PlayerPrefs.HasKey("isBatteryRed"))
+                {
+                    Debug.Log("aaa1");
+                    Debug.Log(npc);
+                    npc.SetActive(true);
+                    Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
+                    // npc.GetComponent<NPC>().count = npc1.GetComponent<NPC>().count;
+                    npc.GetComponent<NPC>().isBatteryBlue = PlayerPrefs.GetInt("isBatteryBlue") == 1 ? true : false;
+                    npc.GetComponent<NPC>().isBatteryRed = PlayerPrefs.GetInt("isBatteryRed") == 1 ? true : false;
+                    npc1.SetActive(false);
+
+                }
+            }
+            else if (currentItem.itemName.ToString() == "BatteryRed")
+            {
+                if (PlayerPrefs.HasKey("isBatteryBlue") && PlayerPrefs.HasKey("isBatteryRed"))
+                {
+                    Debug.Log("bbb1");
+                    Debug.Log(npc1);
+                    Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
+                    npc1.SetActive(true);
+                    //    npc1.GetComponent<NPC>().count = npc.GetComponent<NPC>().count;
+                    npc1.GetComponent<NPC>().isBatteryBlue = PlayerPrefs.GetInt("isBatteryBlue") == 1 ? true : false;
+                    npc1.GetComponent<NPC>().isBatteryRed = PlayerPrefs.GetInt("isBatteryRed") == 1 ? true : false;
+                    npc.SetActive(false);
+                }
+
+            }
 
         }
     }
@@ -74,5 +131,11 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void OnPointerExit(PointerEventData eventData)
     {
         tooltip.gameObject.SetActive(false);
+    }
+
+    public void savedate()
+    {
+
+
     }
 }

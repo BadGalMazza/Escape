@@ -23,7 +23,7 @@ public class InventoryUI : MonoBehaviour
     private void OnUpdateUIEvent(ItemDetails itemDetails, int index)
     {
 
-        Debug.Log("itemDetailssize" + index);
+       // Debug.Log("itemDetailssize" + index);
         if (itemDetails == null)
         {
             slotUI.SetEmpty();

@@ -22,6 +22,8 @@ public class DialogueController : MonoBehaviour
 
     private bool isTalking;
 
+
+
     private void Awake()
     {
         FillDialogueStack();

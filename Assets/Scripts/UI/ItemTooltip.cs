@@ -15,7 +15,10 @@ public class ItemTooltip : MonoBehaviour
             ItemName.Charger => "A charger",
             ItemName.Screwdriver => "A Screwdriver>",
             ItemName.Wonster => "Energy Drink",
+            ItemName.Food => "Energy Food",
             ItemName.scissors => "Cut something",
+            ItemName.BatteryBlue => "BatteryBlue",
+            ItemName.BatteryRed => "BatteryRed",
             ItemName.pin => "A bobby pin",
             _ => ""
         };

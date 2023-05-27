@@ -347,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 118697038}
   tooltip: {fileID: 1839629722}
+  transitionManager: {fileID: 1464911371}
 --- !u!1 &243317714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13315c92b536794fa25d5936f22b0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   startScene: 1
   fadeCanvasGroup: {fileID: 1176569188}
   fadeDuration: 0.3
