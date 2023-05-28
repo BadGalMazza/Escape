@@ -537,7 +537,6 @@ MonoBehaviour:
   openSprite: {fileID: 21300000, guid: c64a9b3fbdb541246ae24d573ed109c1, type: 3}
   canva: {fileID: 1417794763}
   delay: 3
-  soundClip: {fileID: 8300000, guid: 9101e5b6235814d45aa70613ccdfb3f9, type: 3}
 --- !u!1 &471646839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1363,6 @@ MonoBehaviour:
   openSprite: {fileID: 21300000, guid: 309aff9c320d0644f87b63867af459be, type: 3}
   canva: {fileID: 1673906848}
   delay: 3
-  soundClip: {fileID: 8300000, guid: 7e71f5cdea107804bb9cbfe723eba534, type: 3}
 --- !u!61 &2026036412
 BoxCollider2D:
   m_ObjectHideFlags: 0

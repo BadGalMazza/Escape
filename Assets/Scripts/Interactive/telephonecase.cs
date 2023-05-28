@@ -8,19 +8,10 @@ public class telephonecase : Interactive
     private BoxCollider2D coll;
     public Sprite openSprite;
 
-    private AudioSource audioSource;
-    public AudioClip soundClip;
-
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
-
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
     }
 
     private void OnEnable()
@@ -50,8 +41,6 @@ public class telephonecase : Interactive
     {
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
-
-        audioSource.PlayOneShot(soundClip);
     }
 
 }

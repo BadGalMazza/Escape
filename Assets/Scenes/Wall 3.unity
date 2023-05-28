@@ -362,7 +362,6 @@ MonoBehaviour:
   openSprite: {fileID: 21300000, guid: 48d24fb8b877eb1458177315a3411eba, type: 3}
   canva: {fileID: 585131680}
   delay: 3
-  soundClip: {fileID: 8300000, guid: 9101e5b6235814d45aa70613ccdfb3f9, type: 3}
 --- !u!61 &348531603
 BoxCollider2D:
   m_ObjectHideFlags: 0

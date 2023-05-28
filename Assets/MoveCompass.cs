@@ -1,7 +1,7 @@
 /************************************************************
   FileName: Watch.cs
-  Author:Ä©ï¿½ï¿½       Version :1.0          Date: 2018-7-19
-  Description:ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½
+  Author:Ä©Áã       Version :1.0          Date: 2018-7-19
+  Description:±íÕëÍÏ¶¯
 ************************************************************/
 
 using UnityEngine;
@@ -24,17 +24,12 @@ public class MoveCompass : MonoBehaviour
     public bool isgrag = false;
     public bool isgetbuttery = false;
     bool isGet = false;
-
-    public AudioClip successSound;
-    private AudioSource audioSource;
-
+   
 
     private void Start()
     {
         // ???????????????
-        audioSource = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
-     
     }
 
     private void OnDestroy()
@@ -65,8 +60,7 @@ public class MoveCompass : MonoBehaviour
                 ValueTrigger();
                 Debug.Log(isGet);
                 numbershow.SetActive(true);
-                audioSource.PlayOneShot(successSound);
-
+            
             }
 
             oldVector_M = pointerM.localEulerAngles;
