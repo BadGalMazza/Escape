@@ -9,10 +9,21 @@ public class draw : Interactive
     public Sprite openSprite;
     public GameObject canva;
     public float delay = 3f;
+
+    private AudioSource audioSource;
+    public AudioClip soundClip;
+
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
     }
 
@@ -51,6 +62,8 @@ public class draw : Interactive
 
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
+
+        audioSource.PlayOneShot(soundClip);
     }
     private IEnumerator HideUI()
     {
