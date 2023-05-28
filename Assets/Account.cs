@@ -23,14 +23,14 @@ public class Account : MonoBehaviour
     }
     public void check()
     {
-        if(id.text =="123" && password.text == "abc123")
+        if(id.text =="123" && password.text == "123")
         {
             SceneManager.LoadScene(scenecount);
         }
         else
         {
-            errortext.SetActive(true);
-
+            // errortext.SetActive(true);
+            AudioManager.instance.PlayErrorSound();
         }
 
     }
