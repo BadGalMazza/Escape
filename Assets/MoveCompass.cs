@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class MoveCompass : MonoBehaviour
 {
-
+    public GameObject numbershow;
     public float speed;
     public Transform pointerM;
     public Transform pointerH;
@@ -35,7 +35,7 @@ public class MoveCompass : MonoBehaviour
                 isGet = true;
                 ValueTrigger();
                 Debug.Log(isGet);//do you want do
-
+                numbershow.SetActive(true);
 
             }
         

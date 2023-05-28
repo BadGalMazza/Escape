@@ -14,8 +14,9 @@ public class Interactive : MonoBehaviour
         {
             string itemNameTring = itemName.ToString();
             isDone = true;
-            OnClickedAction(itemNameTring);
+            
             EventHandler.CallItemUsedEvent(itemName);
+            OnClickedAction(itemNameTring);
         }
     }
     protected virtual void OnClickedAction(string name)

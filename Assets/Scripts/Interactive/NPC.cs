@@ -25,11 +25,11 @@ public class NPC : Interactive
     {
         dialogueController = GetComponent<DialogueController>();
         loadByPlayerPrefs();
-      //  if(isBatteryBlue)
-     //   {
+       if(!isShowText)
+        {
             blue.SetActive(isBatteryBlue);
             red.SetActive(isBatteryRed);
-     //   }
+        }
     }
     // ?????PlayerPrefs
     private void loadByPlayerPrefs()
@@ -95,6 +95,10 @@ public class NPC : Interactive
             PlayerPrefs.SetInt("count", count);
 
         }
+        if(!isShowText)
+        {
+
+       
         if (name == "BatteryBlue")
         {
             // count = 1;
@@ -120,8 +124,9 @@ public class NPC : Interactive
         {
             BatteryIsdone();
         }
-
+        }
         PlayerPrefs.Save();
+
         //dialogueController.ShowDialogueFinish();
     }
 

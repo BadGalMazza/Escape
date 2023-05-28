@@ -1845,7 +1845,7 @@ MonoBehaviour:
   red: {fileID: 0}
   blue: {fileID: 0}
   moveCompass: {fileID: 0}
-  keyPrefab: {fileID: 0}
+  keyPrefab: {fileID: 4805992720416623493, guid: 548358bde2b9b486c96269ca6ab75dfb, type: 3}
   hasKeySpawned: 0
 --- !u!61 &1957189705
 BoxCollider2D:

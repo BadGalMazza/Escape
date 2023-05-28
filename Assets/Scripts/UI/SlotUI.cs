@@ -92,7 +92,7 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                     Debug.Log("aaa1");
                     Debug.Log(npc);
                     npc.SetActive(true);
-                    Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
+                 //   Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
                     // npc.GetComponent<NPC>().count = npc1.GetComponent<NPC>().count;
                     npc.GetComponent<NPC>().isBatteryBlue = PlayerPrefs.GetInt("isBatteryBlue") == 1 ? true : false;
                     npc.GetComponent<NPC>().isBatteryRed = PlayerPrefs.GetInt("isBatteryRed") == 1 ? true : false;
@@ -106,7 +106,7 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                 {
                     Debug.Log("bbb1");
                     Debug.Log(npc1);
-                    Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
+                 //   Debug.Log("blue" + PlayerPrefs.GetInt("isBatteryBlue"));
                     npc1.SetActive(true);
                     //    npc1.GetComponent<NPC>().count = npc.GetComponent<NPC>().count;
                     npc1.GetComponent<NPC>().isBatteryBlue = PlayerPrefs.GetInt("isBatteryBlue") == 1 ? true : false;

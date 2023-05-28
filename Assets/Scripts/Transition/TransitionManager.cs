@@ -20,8 +20,10 @@ public class TransitionManager : MonoBehaviour
         Passwordlock,
         Run,
         telephone,
-        PCenter,
+        Puzzle,
         clock,
+        PCenter,
+        bag,      
     }
 
     public LoadedScenes startScene;
