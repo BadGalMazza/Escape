@@ -12,10 +12,10 @@ public class ItemTooltip : MonoBehaviour
         itemNameText.text = itemName switch
         {
             ItemName.Key => "A Key",
-            ItemName.Charger => "A charger",
+            ItemName.Charger => "Phone charger",
             ItemName.Screwdriver => "A Screwdriver>",
             ItemName.Wonster => "Energy Drink",
-            ItemName.Food => "Energy Food",
+            ItemName.Food => "Left over pizza",
             ItemName.scissors => "Cut something",
             ItemName.BatteryBlue => "BatteryBlue",
             ItemName.BatteryRed => "BatteryRed",

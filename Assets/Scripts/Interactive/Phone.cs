@@ -7,11 +7,13 @@ public class Phone : Interactive
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D coll;
     public Sprite openSprite;
-
+    public GameObject canva;
+    public float delay = 3f;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+
     }
 
     private void OnEnable()
@@ -23,7 +25,13 @@ public class Phone : Interactive
     {
         EventHandler.AfterSceneLoadedEvent -= OnAfterSceneLoadedEvent;
     }
-
+    public override void EmptyClicked()
+    {
+        Debug.Log("EmptyClicked key");//do you want do
+        StopCoroutine("HideUI");
+        canva.SetActive(true);
+        StartCoroutine("HideUI");
+    }
     private void OnAfterSceneLoadedEvent()
     {
         if (!isDone)
@@ -39,7 +47,14 @@ public class Phone : Interactive
     }
     protected override void OnClickedAction(string name)
     {
+        Debug.Log(name);
+
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
+    }
+    private IEnumerator HideUI()
+    {
+        yield return new WaitForSeconds(delay);
+        canva.SetActive(false);
     }
 }
