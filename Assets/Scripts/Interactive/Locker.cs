@@ -37,6 +37,7 @@ public class Locker : Interactive
         if (!isDone)
         {
             transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
         }
         else
         {
@@ -55,6 +56,7 @@ public class Locker : Interactive
         }
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
     }
     private IEnumerator HideUI()
     {
