@@ -46,12 +46,12 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
         Debug.Log(gameScene.name);
 
-        GameObject npc = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC");
-        GameObject npc1 = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC1");
+        
         Debug.Log(gameScene.name);
         if (transitionManager.index == 5)
         {
-
+            GameObject npc = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC");
+            GameObject npc1 = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC1");
 
             if (currentItem.itemName.ToString() == "Wonster")
             {
@@ -84,6 +84,8 @@ public class SlotUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         }
         else if (transitionManager.index == 12)
         {
+            GameObject npc = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC2");
+            GameObject npc1 = gameScene.GetRootGameObjects().FirstOrDefault(x => x.name == "NPC3");
 
             if (currentItem.itemName.ToString() == "BatteryBlue")
             {
