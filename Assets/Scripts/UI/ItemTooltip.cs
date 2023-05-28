@@ -11,15 +11,15 @@ public class ItemTooltip : MonoBehaviour
     {
         itemNameText.text = itemName switch
         {
-            ItemName.Key => "A Key",
+            ItemName.Key => "A Key" + "                         What’s it for?",
             ItemName.Charger => "Phone charger",
-            ItemName.Screwdriver => "A Screwdriver>",
-            ItemName.Wonster => "Energy Drink",
-            ItemName.Food => "Left over pizza",
-            ItemName.scissors => "Cut something",
+            ItemName.Screwdriver => "A Screwdriver",
+            ItemName.Wonster => "Energy Drink" + "              Wonster? That sounds familiar...",
+            ItemName.Food => "Left over pizza" + "              Ew...",
+            ItemName.scissors => "A scissor" + "                Maybe I can cut something?",
             ItemName.BatteryBlue => "BatteryBlue",
             ItemName.BatteryRed => "BatteryRed",
-            ItemName.pin => "A bobby pin",
+            ItemName.pin => "A paper click" + "                 I wonder what this can do?",
             _ => ""
         };
     }
