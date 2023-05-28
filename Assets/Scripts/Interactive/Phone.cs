@@ -47,10 +47,11 @@ public class Phone : Interactive
     }
     protected override void OnClickedAction(string name)
     {
-        Debug.Log(name);
+        Debug.Log(111);
 
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
+        coll.enabled = true;
     }
     private IEnumerator HideUI()
     {
