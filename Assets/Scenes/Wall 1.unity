@@ -940,6 +940,7 @@ MonoBehaviour:
   openSprite: {fileID: 21300000, guid: 86976ffa69f5ec544a7323402fd8bb0f, type: 3}
   canva: {fileID: 626739126}
   delay: 3
+  soundClip: {fileID: 8300000, guid: 4a7ca82123d1c56408e72ebc0cc98998, type: 3}
 --- !u!212 &1363295936
 SpriteRenderer:
   m_ObjectHideFlags: 0
