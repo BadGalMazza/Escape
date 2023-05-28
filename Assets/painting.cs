@@ -8,21 +8,12 @@ public class painting : Interactive
     private BoxCollider2D coll;
     public Sprite openSprite;
     public GameObject canva;
-    public float delay = 1f;
-
-    private AudioSource audioSource;
-    public AudioClip soundClip;
-
+    public float delay = 3f;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
 
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
     }
 
     private void OnEnable()
@@ -34,15 +25,13 @@ public class painting : Interactive
     {
         EventHandler.AfterSceneLoadedEvent -= OnAfterSceneLoadedEvent;
     }
-
     public override void EmptyClicked()
     {
-        Debug.Log("EmptyClicked key");
+        Debug.Log("EmptyClicked key");//do you want do
         StopCoroutine("HideUI");
         canva.SetActive(true);
         StartCoroutine("HideUI");
     }
-
     private void OnAfterSceneLoadedEvent()
     {
         if (!isDone)
@@ -54,22 +43,19 @@ public class painting : Interactive
             spriteRenderer.sprite = openSprite;
             coll.enabled = false;
         }
-    }
 
+    }
     protected override void OnClickedAction(string name)
     {
-        Debug.Log(111);
-
+        Debug.Log(name);
+     
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
-        audioSource.PlayOneShot(soundClip);
-        coll.enabled = true;
-        canva.SetActive(false);
     }
-
     private IEnumerator HideUI()
     {
         yield return new WaitForSeconds(delay);
         canva.SetActive(false);
     }
 }
+
