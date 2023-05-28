@@ -32,7 +32,8 @@ public class Eacape : MonoBehaviour
         }
         else
         {
-            wrongMessage.SetActive(true);
+            //wrongMessage.SetActive(true);
+            AudioManager.instance.PlayErrorSound();
         }
 
     }
