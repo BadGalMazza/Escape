@@ -8,12 +8,21 @@ public class Locker : Interactive
     private BoxCollider2D coll;
     public Sprite openSprite;
     public GameObject canva;
-    public float delay = 3f;
+    public float delay = 2f;
+
+    private AudioSource audioSource;
+    public AudioClip soundClip;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
-       
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void OnEnable()
@@ -57,6 +66,10 @@ public class Locker : Interactive
         spriteRenderer.sprite = openSprite;
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(true);
+
+        coll.enabled = true;
+
+        audioSource.PlayOneShot(soundClip);
     }
     private IEnumerator HideUI()
     {

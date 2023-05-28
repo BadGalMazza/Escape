@@ -8,7 +8,7 @@ public class Phone : Interactive
     private BoxCollider2D coll;
     public Sprite openSprite;
     public GameObject canva;
-    public float delay = 3f;
+    public float delay = 1f;
 
     private AudioSource audioSource;
     public AudioClip soundClip;
