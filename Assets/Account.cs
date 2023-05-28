@@ -11,6 +11,7 @@ public class Account : MonoBehaviour
     public InputField password;
     public int scenecount = 0;
     public GameObject errortext;
+    public Teleport teleport;
     void Start()
     {
         
@@ -25,7 +26,7 @@ public class Account : MonoBehaviour
     {
         if(id.text =="123" && password.text == "123")
         {
-            SceneManager.LoadScene(scenecount);
+            teleport.TeleportToSecen();
         }
         else
         {
