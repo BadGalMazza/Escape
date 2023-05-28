@@ -20,11 +20,19 @@ public class Balloons : MonoBehaviour
 
             if (hit.collider != null)
             {
+<<<<<<< Updated upstream
                 if (hit.transform == transform)  // 确保点击的是这个对象
+=======
+                if (hit.transform == transform)  // ??????????
+>>>>>>> Stashed changes
                 {
                     anim.SetTrigger("Active");
                 }
             }
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
